@@ -1,0 +1,36 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <img src="/image/online-store.svg" class="navbar-brand" height="50px">
+    {{!-- <a href="navbar-brand">Git</a> --}}
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item  ">
+          <a class="nav-link {{#if navHome }} active {{/if}}" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item  ">
+          <a class="nav-link {{#if navProjects }} active {{/if}}" href="/projects">Projects <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{#if navblog }} active {{/if}}" href="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{#if navabout }} active {{/if}}" href="/contact">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{#if navcontact }} active {{/if}}" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{#if navresume }} active {{/if}}" href="#">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{#if navadmin }} active {{/if}}" href="/login">Admin</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

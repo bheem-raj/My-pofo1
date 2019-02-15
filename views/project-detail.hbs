@@ -1,0 +1,78 @@
+<main role="main">
+
+    <div class="album py-3 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 project-detail-sb">
+                    <div>
+                        <h2>Links</h2>
+                        <div class="sb-link">
+                            <a href="#" class="btn btn-primary">Line Demo</a>
+                        </div>
+                        <div class="sb-link">
+                            <a href="#" class="btn btn-secondary">Github</a>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div>
+                        <h2>Tags</h2>
+                        {{#each project.tags}}
+                        <h6> <span class="badge badge-{{this.class}}">Javascript</span></h6>
+                       {{/each}}
+                    </div>
+                    <hr>
+
+                    <div>
+                        <h2>Relted projects</h2>
+                        
+                        {{#each project.relatedProjects}}
+                        <div class="sb-link">
+                            <a href="{{this.link}}">{{this.name}}</a>
+                        </div>
+                        {{/each}}
+                        
+                    </div>
+
+                    <hr>
+
+                   <div>
+                        <h2>Resources</h2>
+                    <div class="sb-link">
+                        <a href="#">Js console</a>
+                    </div>
+                    <div class="sb-link">
+                        <a href="#">Js console</a>
+                    </div>
+                    <div class="sb-link">
+                        <a href="#">Js console</a>
+                    </div>
+                   </div>
+
+                </div>
+
+                <br clear="all">
+
+                <div class="col mb-9 shadow-sm">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Library</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">project-details</li>
+                        </ol>
+                    </nav>
+                    <h1 class="display-3">{{project.name}}</h1>
+                    <p>{{project.description}}</p>
+                    {{!-- <img src="https://www.mypofo.com/projects/number-guessing-game/images/slides/slide1.png" alt=""
+                        srcset=""> --}}
+                    
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</main>
