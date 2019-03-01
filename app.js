@@ -15,9 +15,26 @@ const middleware = require('./Middlewares/appmiddleware')
 
 const app = express();
 
+const mongoose = require('mongoose');
+
 app.set('views'.__dirname + '/views');
 app.set('view engine', 'hbs');
 app.set('view options', { layout: 'layout' });
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+
+
+mongoose.connect('mongodb://localhost:27017/mean',{
+    useNewUrlParser: true}, function(err, data){
+        if(err){
+            console.log(err)
+        }else{
+            console.log('DB Connection Successfull')
+        }        
+})
+
 
 hbs.registerPartials(__dirname + '/views/partials')
 hbs.registerHelper('inc',function(value,options){

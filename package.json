@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+     "start":"nodemon app.js"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,7 @@
     "express-validator": "^5.3.1",
     "hbs": "^4.0.1",
     "mongodb": "^3.1.13",
+    "mongoose": "^5.4.16",
     "sessions": "0.0.2-7"
   }
 }
